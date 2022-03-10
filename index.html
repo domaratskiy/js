@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+     <style>
+        
+        img[height='150'] /* обращение по селектору img который имеет высоту 150 пикс */
+        img[img^='/img']    /* обращение к img который имеет в начале своего пути /img */
+        img[img$='.png']    /* обращение к img который имеет в конце своего пути .png */
+        a[href*='#']    /* обращение к a который имеет в любом месте решотку */
+
+
+
+
+    </style>
+   <script src="jquery.js"></script>
+
+   <script>
+   
+        $('a'); // выборка элемента с DOM дерева HTML
+        $('#link'); 
+        $('.link > div');  // Выбираем только дочерний элемент
+        $('.link + div'); // Выбираем соседний элемент
+
+        $('img[height=150]'); // обращение по селектору img который имеет высоту 150 пикс
+
+        $('ul li:even'); // выборка нечётных эдементов
+        $('ul li:odd'); // выборка чётных эдементов
+        $('ul li:not(:last-child)'); // выбираем все элементы кроме последнего
+        $('ul li:has(a)'); // выбираем все элементы li которые имеют внутри тег а
+        $('p:contains(client)'); // выбираем  элемент p которые имеет внутри текст client
+        $('header li:first');  // выбираем первый li
+        $('header li:last'); // выбираем последний li
+        $('header:hidden'); // выбираем скрытый header
+        $('header:visibility'); // выбираем нескрытый header
+
+
+        -----------------------------------------------------------------------------------------
+
+        $(document).ready(function(){
+            // Пишем код тут. Он будет выполнятся только когда весь html код прогрузился
+        });
+        // аналог
+        $(function(){
+            // Пишем код тут. Он будет выполнятся только когда весь html код прогрузился
+        });
+
+        
+    // let w = $('.menu li').width(300); устанавливат ширину блока в 300пикселей
+    // let w = $('.menu li').height(300);
+
+     function namber(eltm){
+         let className = "." +=eltm;
+         let w = $(className).width();
+         let h = $(className).height();
+         $(p).text("ширина:"+w+"; Высота:"+h);
+
+     }
+     namber('btn');
+
+
+        
+   </script>       
+    </pre>
+
+</body>
+</html>
